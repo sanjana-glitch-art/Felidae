@@ -1,5 +1,5 @@
 catrl-env/
-venv/
-.env/
+env/
 __pycache__/
 *.pyc
+*.pkl
