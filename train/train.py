@@ -23,8 +23,8 @@ from env.cat_env import CatEnv
 # ──────────────────────────────────────────────────────────────
 #  CONFIG  — edit these to try different experiments
 # ──────────────────────────────────────────────────────────────
-EXPERIMENT_NAME = "catrl_v2"          # change to v2, v3 for ablations
-TOTAL_TIMESTEPS = 500_000             # increase to 1_000_000 for better behaviour
+EXPERIMENT_NAME = "catrl_final"          # change to v2, v3 for ablations
+TOTAL_TIMESTEPS = 1_000_000           # increase to 1_000_000 for better behaviour
 N_ENVS          = 4                   # parallel environments (speeds training up)
 SAVE_FREQ       = 50_000              # save a checkpoint every N steps
 
@@ -98,7 +98,7 @@ model = PPO(
     n_epochs=10,             # how many gradient steps per batch
     gamma=0.99,              # discount factor — how much future rewards matter
     gae_lambda=0.95,         # GAE smoothing factor
-    ent_coef=0.01,           # encourages exploration early on
+    ent_coef=0.05,           # encourages exploration early on
     clip_range=0.2,          # the "proximal" part of PPO — limits policy change per step
     policy_kwargs=dict(net_arch=[128, 128]),  # two hidden layers of 128 neurons
 )

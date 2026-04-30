@@ -22,7 +22,7 @@ from env.cat_env import CatEnv
 # ──────────────────────────────────────────────────────────────
 #  CONFIG
 # ──────────────────────────────────────────────────────────────
-MODEL_PATH = "models/catrl_v2"   # no .zip extension needed
+MODEL_PATH = "models/catrl_final"   # no .zip extension needed
 N_EPISODES = 10
 RENDER     = True                # set False for headless evaluation
 
